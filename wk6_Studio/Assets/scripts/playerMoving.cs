@@ -72,7 +72,6 @@ public class playerMoving : MonoBehaviour
 
         if (isStarted == true)
         {
-
             moveInput = Input.GetAxis("Horizontal");
             rb2d.velocity = new Vector2(moveInput * speed, rb2d.velocity.y);
         }

@@ -6,9 +6,10 @@ public class Bounce : MonoBehaviour
 {
     public float bounceSpeed = 600f;
     // Start is called before the first frame update
+    private GameObject GS;
     void Start()
     {
-        
+        GS = GameObject.FindGameObjectWithTag("GameController");
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class Bounce : MonoBehaviour
         {
             //Debug.Log(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up*bounceSpeed);
+            if(!GS.GetComponent<GameStatus>().isChanging) GS.GetComponent<GameStatus>().SwiftStatus();
         }
     }
 }
