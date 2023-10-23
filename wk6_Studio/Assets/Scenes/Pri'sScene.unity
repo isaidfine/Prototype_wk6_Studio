@@ -510,10 +510,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4625798218783208020, guid: 174e23ced49ca4f4da052e8eef7d708f, type: 3}
-      propertyPath: bounceSpeed
-      value: 400
-      objectReference: {fileID: 0}
     - target: {fileID: 5668807785766196589, guid: 174e23ced49ca4f4da052e8eef7d708f, type: 3}
       propertyPath: m_Name
       value: platform
