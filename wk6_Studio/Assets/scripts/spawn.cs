@@ -39,7 +39,7 @@ public class spawn : MonoBehaviour
         platform.transform.position= new Vector2(Random.Range(-spawnXMax,spawnXMax),platform.transform.position.y - spawnYMax*1.5f-cameraYmax*0.5f + Random.Range(-0.5f*(spawnYMax-cameraYmax),0));
         else if(platform.transform.position.y- player.transform.position.y <= -spawnYMax)
         platform.transform.position= new Vector2(Random.Range(-spawnXMax,spawnXMax),platform.transform.position.y + spawnYMax*1.5f+cameraYmax*0.5f + Random.Range(0,0.5f*(spawnYMax-cameraYmax)));
-       if (platform.transform.position.x >= (player.transform.position.x+spawnXMax) || platform.transform.position.x <= (player.transform.position.x - spawnXMax) )
+       if (platform.transform.position.x >= (player.transform.position.x+spawnXMax+2.0f) || platform.transform.position.x <= (player.transform.position.x - spawnXMax-2.0f) )
          platform.transform.position = new Vector2 (Random.Range(player.transform.position.x - spawnXMax,player.transform.position.x+spawnXMax),platform.transform.position.y);
 
     }
