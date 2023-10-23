@@ -7,7 +7,7 @@ using UnityEngine;
     {
         public Sprite playerSprite;
         public GameObject platformObjects;
-        public Sprite bgSprite;       
+        public Sprite bgSprite;        
     }
 
 public class GameStatus : MonoBehaviour
@@ -28,6 +28,7 @@ public class GameStatus : MonoBehaviour
     public GameObject formerPlayer;
     public GameObject currentBG;
     public GameObject formerBG;
+
 
     private Color startColor ;
     private Color endColor ;
@@ -111,7 +112,6 @@ public class GameStatus : MonoBehaviour
             
         }
         currentPlatform.SetActive(true);
-
         UpdateChildren(currentPlatform.transform, currentPlatformList);
         UpdateChildren(formerPlatform.transform, formerPlatformList);
     }

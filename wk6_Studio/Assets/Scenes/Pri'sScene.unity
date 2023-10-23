@@ -244,6 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 192660077}
+  - component: {fileID: 192660078}
   m_Layer: 0
   m_Name: RabbitPlatforms
   m_TagString: Untagged
@@ -270,6 +271,21 @@ Transform:
   - {fileID: 1257537040}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192660078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192660076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ee2dc5725c7cc44b8a833e34d61a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnXMax: 4
+  cameraYmax: 7.5
+  spawnYMax: 12
 --- !u!1001 &243100717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,6 +494,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8377478639572984732, guid: 174e23ced49ca4f4da052e8eef7d708f, type: 3}
   m_PrefabInstance: {fileID: 272560950}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &280320133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280320134}
+  m_Layer: 0
+  m_Name: anchor
+  m_TagString: Anchor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280320134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280320133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1117938820928045149}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &291519688
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 572024466}
+  - component: {fileID: 572024467}
   m_Layer: 0
   m_Name: GrammaPlatforms
   m_TagString: Untagged
@@ -669,6 +717,21 @@ Transform:
   - {fileID: 1976038824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572024467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572024465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ee2dc5725c7cc44b8a833e34d61a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnXMax: 4
+  cameraYmax: 7.5
+  spawnYMax: 12
 --- !u!4 &697168875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8377478639572984732, guid: 2e8afd2dd514047aeba98dc2e66bf410, type: 3}
@@ -1301,6 +1364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1583908152}
+  - component: {fileID: 1583908153}
   m_Layer: 0
   m_Name: SnakePlatforms
   m_TagString: Untagged
@@ -1326,6 +1390,21 @@ Transform:
   - {fileID: 243100718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583908153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583908151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ee2dc5725c7cc44b8a833e34d61a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnXMax: 4
+  cameraYmax: 7.5
+  spawnYMax: 12
 --- !u!4 &1600218019 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8377478639572984732, guid: 2e8afd2dd514047aeba98dc2e66bf410, type: 3}
@@ -1679,7 +1758,8 @@ Transform:
   m_LocalPosition: {x: -0.05343082, y: 0.92800903, z: -5.0900006}
   m_LocalScale: {x: 0.28121486, y: 0.28121486, z: 0.28121486}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 280320134}
   m_Father: {fileID: 8473813143087192573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1584682434331093195
