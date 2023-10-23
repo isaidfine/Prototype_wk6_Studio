@@ -10,20 +10,21 @@ public class playerMoving : MonoBehaviour
     private float moveInput;
     public float speed = 10f;
     // Start is called before the first frame update
-    public bool isStarted = false;
+    public bool isStarted = true;
 
     private float topScore = 0.0f;
 
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI startText;
+    //public TextMeshProUGUI startText;
 
     // Start is called before the first frame update
     void Start()
     {
+        isStarted = true;
 
         rb2d = GetComponent<Rigidbody2D>();
 
-        rb2d.gravityScale = 0;
+        //rb2d.gravityScale = 0;
         rb2d.velocity = Vector3.zero;
 
     }
@@ -31,14 +32,14 @@ public class playerMoving : MonoBehaviour
      void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Space) && isStarted == false)
-        {
+        // if(Input.GetKeyDown(KeyCode.Space) && isStarted == false)
+        // {
 
-            isStarted = true;
-            startText.gameObject.SetActive(false);
-            rb2d.gravityScale = 5f;
+        //     isStarted = true;
+        //     startText.gameObject.SetActive(false);
+        //     rb2d.gravityScale = 5f;
 
-        }
+        // }
 
         if (isStarted == true)
         {
