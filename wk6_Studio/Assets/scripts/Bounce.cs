@@ -19,10 +19,10 @@ public class Bounce : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("bounce");
-        //Debug.Log(collision.gameObject.GetComponent<Rigidbody2D>().velocity);
-        if(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y<=0.0f);
+        //Debug.Log(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        if(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0.0f)
         {
-            Debug.Log("y<0");
+            Debug.Log(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y);
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up*bounceSpeed);
         }
     }
