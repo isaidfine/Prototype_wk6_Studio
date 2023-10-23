@@ -32,6 +32,9 @@ public class GameStatus : MonoBehaviour
     private Color startColor ;
     private Color endColor ;
 
+    private List<GameObject> GrammaPlatformList;
+    private List<GameObject> RabbitPlatformList;
+    private List<GameObject> SnakePlatformList;
     
     void Start()
     {
@@ -101,6 +104,16 @@ public class GameStatus : MonoBehaviour
             isChanging = false;
             formerBG.SetActive(false);
             formerPlayer.SetActive(false);
+        }
+    }
+
+    void GetDirectChildren(Transform parent, List<GameObject> directChildren)
+    {
+        directChildren.Clear();
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            Transform child = parent.GetChild(i);
+            directChildren.Add(child.gameObject);
         }
     }
 
