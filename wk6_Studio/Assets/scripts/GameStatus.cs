@@ -167,7 +167,7 @@ public class GameStatus : MonoBehaviour
             //     RabbitSprites.platformObjects.SetActive(false);
             //     break;
             // }
-            //formerPlatform.SetActive(false);
+            formerPlatform.SetActive(false);
             formerBG.SetActive(false);
             formerPlayer.SetActive(false);
         }
