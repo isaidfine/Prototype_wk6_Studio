@@ -34,17 +34,21 @@ public class GameStatus : MonoBehaviour
     private Color startColor ;
     private Color endColor ;
 
+    private GameObject player;
+
     private GameObject currentPlatform;
     private GameObject formerPlatform;
     private List<GameObject> formerPlatformList = new List<GameObject>();
-    private List<GameObject> currentPlatformList = new List<GameObject>() ;
+    private List<GameObject> currentPlatformList = new List<GameObject>();
     
     void Start()
     {
-        currentPlayer = transform.GetChild(0).gameObject;
-        formerPlayer = transform.GetChild(1).gameObject;
-        currentBG = transform.GetChild(2).gameObject;
-        formerBG = transform.GetChild(3).gameObject;
+        player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log(player.transform.childCount);
+        currentPlayer = player.transform.GetChild(0).gameObject;
+        formerPlayer = player.transform.GetChild(1).gameObject;
+        currentBG = player.transform.GetChild(2).gameObject;
+        formerBG = player.transform.GetChild(3).gameObject;
         currentPlatform = GrammaSprites.platformObjects;
         formerPlatform = SnakeSprites.platformObjects;
         Debug.Log(currentPlatform);

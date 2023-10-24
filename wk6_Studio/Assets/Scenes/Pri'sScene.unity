@@ -217,10 +217,6 @@ MonoBehaviour:
   changingTime: 0.9
   advancedClosingTime: 0.8
   isChanging: 0
-  currentPlayer: {fileID: 1410761974}
-  formerPlayer: {fileID: 333633816}
-  currentBG: {fileID: 1746221536941302303}
-  formerBG: {fileID: 261402560}
 --- !u!4 &147869644
 Transform:
   m_ObjectHideFlags: 0
@@ -365,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &261402561
 Transform:
   m_ObjectHideFlags: 0
@@ -663,7 +659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &333633817
 Transform:
   m_ObjectHideFlags: 0
