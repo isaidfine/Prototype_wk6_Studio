@@ -120,10 +120,10 @@ public class GameStatus : MonoBehaviour
                 break;
             
         }
-
+        currentPlatform.SetActive(true);
         UpdateChildren(currentPlatform.transform, currentPlatformList);
         UpdateChildren(formerPlatform.transform, formerPlatformList);
-        currentPlatform.SetActive(true);
+        
         OpenCollider(currentPlatformList,true);
     }
 
@@ -183,14 +183,14 @@ public class GameStatus : MonoBehaviour
         }
     }
 
-    void SetupChildren(Transform parent, List<GameObject> directChildren)
-    {
-        for (int i = 0; i < parent.childCount; i++)
-        {
-            Transform child = parent.GetChild(i);
-            directChildren.Add(child.gameObject);
-        }
-    }
+    // void SetupChildren(Transform parent, List<GameObject> directChildren)
+    // {
+    //     for (int i = 0; i < parent.childCount; i++)
+    //     {
+    //         Transform child = parent.GetChild(i);
+    //         directChildren.Add(child.gameObject);
+    //     }
+    // }
 
     void OpenCollider(List<GameObject> platformList, bool open)
     {
