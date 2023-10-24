@@ -214,7 +214,8 @@ MonoBehaviour:
     playerSprite: {fileID: 21300000, guid: fa1e54a62d299445ba140764168f1cd7, type: 3}
     platformObjects: {fileID: 1583908151}
     bgSprite: {fileID: 21300000, guid: 7ed2aec661f0d44538f025dd12d03e32, type: 3}
-  floatingTime: 0.9
+  changingTime: 0.9
+  advancedClosingTime: 0.8
   isChanging: 0
   currentPlayer: {fileID: 1410761974}
   formerPlayer: {fileID: 333633816}
@@ -251,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &192660077
 Transform:
   m_ObjectHideFlags: 0
@@ -1237,7 +1238,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: a9b7f4415e71a4a248c8266b9da20c5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1425,7 +1426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1583908152
 Transform:
   m_ObjectHideFlags: 0
@@ -1924,7 +1925,6 @@ MonoBehaviour:
   speed: 10
   isStarted: 0
   scoreText: {fileID: 1922943995}
-  startText: {fileID: 1312612799}
 --- !u!4 &1117938820928045149
 Transform:
   m_ObjectHideFlags: 0
@@ -1981,7 +1981,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d59a8c47d48454d799b2a0a8a37704d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2280,9 +2280,9 @@ Transform:
   m_Children:
   - {fileID: 1410761975}
   - {fileID: 333633817}
-  - {fileID: 1117938820928045149}
   - {fileID: 6178132253933550501}
   - {fileID: 261402561}
+  - {fileID: 1117938820928045149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8789368656943143868
@@ -2317,7 +2317,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002579242, y: -0.10277341}
+  m_Offset: {x: -0.002579242, y: -0.073435426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2328,7 +2328,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.29299825, y: 0.43084398}
+  m_Size: {x: 0.29299825, y: 0.372168}
   m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -2336,9 +2336,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 8473813143087192573}
   - {fileID: 1567373616}
-  - {fileID: 291519691}
   - {fileID: 147869644}
   - {fileID: 572024466}
   - {fileID: 192660077}
   - {fileID: 1583908152}
   - {fileID: 34041339}
+  - {fileID: 291519691}

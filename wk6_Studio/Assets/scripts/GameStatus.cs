@@ -21,13 +21,14 @@ public class GameStatus : MonoBehaviour
     [SerializeField] WorldSprite RabbitSprites;
     [SerializeField] WorldSprite SnakeSprites;    
 
-    public float floatingTime;
+    public float changingTime;
+    public float advancedClosingTime;
     public bool isChanging;
     private float t = 0f;
-    public GameObject currentPlayer;
-    public GameObject formerPlayer;
-    public GameObject currentBG;
-    public GameObject formerBG;
+    private GameObject currentPlayer;
+    private GameObject formerPlayer;
+    private GameObject currentBG;
+    private GameObject formerBG;
 
 
     private Color startColor ;
@@ -40,6 +41,10 @@ public class GameStatus : MonoBehaviour
     
     void Start()
     {
+        currentPlayer = transform.GetChild(0).gameObject;
+        formerPlayer = transform.GetChild(1).gameObject;
+        currentBG = transform.GetChild(2).gameObject;
+        formerBG = transform.GetChild(3).gameObject;
         currentPlatform = GrammaSprites.platformObjects;
         formerPlatform = SnakeSprites.platformObjects;
         Debug.Log(currentPlatform);
@@ -111,17 +116,19 @@ public class GameStatus : MonoBehaviour
                 break;
             
         }
-        currentPlatform.SetActive(true);
+
         UpdateChildren(currentPlatform.transform, currentPlatformList);
         UpdateChildren(formerPlatform.transform, formerPlatformList);
+        currentPlatform.SetActive(true);
+        OpenCollider(currentPlatformList,true);
     }
 
     void ChangingStatus()
     {
         t += Time.deltaTime;
-        if(t<=floatingTime)
+        if(t<=changingTime)
         {
-            float lerpT = t/floatingTime;
+            float lerpT = t/changingTime;
             formerBG.GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, 1-t);
             formerPlayer.GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor, 1-t);
             currentPlayer.GetComponent<SpriteRenderer>().color = Color.Lerp(startColor,endColor,t);
@@ -133,6 +140,10 @@ public class GameStatus : MonoBehaviour
             foreach(GameObject platform in formerPlatformList)
             {
                 platform.transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.Lerp(startColor, endColor,1-t);
+            }
+            if(t>=changingTime-advancedClosingTime)
+            {
+                OpenCollider(formerPlatformList,false);
             }
 
 
@@ -152,7 +163,7 @@ public class GameStatus : MonoBehaviour
             //     RabbitSprites.platformObjects.SetActive(false);
             //     break;
             // }
-            formerPlatform.SetActive(false);
+            //formerPlatform.SetActive(false);
             formerBG.SetActive(false);
             formerPlayer.SetActive(false);
         }
@@ -175,6 +186,15 @@ public class GameStatus : MonoBehaviour
             Transform child = parent.GetChild(i);
             directChildren.Add(child.gameObject);
         }
+    }
+
+    void OpenCollider(List<GameObject> platformList, bool open)
+    {
+        foreach(GameObject platform in platformList)
+                {
+                    if(platform.transform.GetComponent<Collider2D>().enabled == open) break;
+                    platform.transform.GetComponent<Collider2D>().enabled = open;
+                }
     }
 
 }
